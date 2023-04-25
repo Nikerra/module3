@@ -36,7 +36,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
 
     @Override
     public void ensureCapacity(int minCapacity) {
-        if (minCapacity > array.length
+        if (minCapacity >= array.length
                 && !(array == DEFAULTCAPACITY_EMPTY_ARRAY
                 && minCapacity <= DEFAULT_CAPACITY)) {
             grow(minCapacity);
@@ -79,6 +79,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
 
     @Override
     public boolean remove(T item) {
+        trimToSize();
         boolean removeFlag = false;
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(item)) {
@@ -184,7 +185,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
     }
     @Override
     public  String toString() {
-        trimToSize();
+//        trimToSize();
         if (array == null)
             return "null";
 

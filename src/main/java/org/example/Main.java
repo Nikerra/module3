@@ -5,12 +5,14 @@ import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        CustomArrayImpl<Integer> array = new CustomArrayImpl<>();
+        CustomArrayImpl<Integer> array = new CustomArrayImpl<>(3);
         System.out.println("array is empty=" + array.isEmpty());
         System.out.println("add elem=" + array.add(1));
         System.out.println("size array=" + array.size());
+        System.out.println(array.toString());
         System.out.println("add elem=" + array.add(2));
         System.out.println("size array=" + array.size());
+        System.out.println(array.toString());
         System.out.println("add elem=" + array.add(3));
         System.out.println("size array=" + array.size());
         System.out.println("add elem=" + array.add(4));
