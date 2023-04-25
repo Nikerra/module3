@@ -139,6 +139,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
             tempArray = grow(s + numNew);
         }
         System.arraycopy(array, 0, tempArray, s, numNew);
+        size = array.length;
         return true;
     }
 
@@ -154,6 +155,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
             tempArray = grow(s + numNew);
         }
         System.arraycopy(array, 0, tempArray, s, numNew);
+        size = array.length;
         return true;
     }
 
