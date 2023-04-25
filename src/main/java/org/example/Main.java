@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] testArray = new Integer[100];
+        Integer[] testArray = new Integer[5];
         for (int i = 0; i < testArray.length; i++) {
             testArray[i] = i;
         }
@@ -53,6 +53,12 @@ public class Main {
         System.out.println("set elem for index old value=" + array.set(1,99));
         System.out.println("size array=" + array.size());
         System.out.println(array.toString());
+        System.out.println("indexOf=" + array.indexOf(99));
+        System.out.println("contains=" + array.contains(1));
+        array.reverse();
+        System.out.println("array reverse=" + array.toString());
+        System.out.println("indexOf=" + array.indexOf(98));
+        System.out.println("contains=" + array.contains(1));
 
     }
 }

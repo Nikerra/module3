@@ -129,6 +129,7 @@ class CustomArrayImpl <T> implements CustomArray<T>{
 
     @Override
     public boolean addAll(T[] items) {
+
         Object[] array = items;
         int numNew = array.length;
         if (numNew == 0)
